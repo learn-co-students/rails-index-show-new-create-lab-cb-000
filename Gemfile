@@ -23,6 +23,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# REQUIRED so that the app can be built
+gem 'json', github: 'flori/json', branch: 'v1.8'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -41,4 +44,3 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
 end
-
