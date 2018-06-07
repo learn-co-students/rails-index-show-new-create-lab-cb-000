@@ -1,0 +1,7 @@
+<% if !@coupons.empty?%>
+  <% @coupons.each do |coupon| %>
+  <%= link_to "#{coupon.store}|#{coupon.coupon_code}" , coupon_path(coupon.id) %><br>
+  <% end %>
+<% else %>
+  <p>coupons list is empty<p><br>
+<% end %>
