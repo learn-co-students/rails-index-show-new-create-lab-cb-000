@@ -25,8 +25,8 @@ describe 'form page' do
   it 'new form submits content and renders form content' do
     visit new_coupon_path
 
-    fill_in 'coupon[coupon_code]', with: "YAYFREE"
-    fill_in 'coupon[store]', with: "Hobby Lobby"
+    fill_in 'coupon[coupon_code]', with: "YAYFREE", visible: false
+    fill_in 'coupon[store]', with: "Hobby Lobby", visible: false
 
     click_on "Submit Coupon"
 
