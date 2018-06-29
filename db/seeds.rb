@@ -8,7 +8,12 @@
 
 def seed_coupons(store_names)
 
-  def rand; (++Random.new.rand(100) ** 15 ).to_s.slice(1..12); end
+  def rand
+    r = ""
+    3.times { r += ++Random.new.rand(8).to_s }
+    3.times { r += ('A'..'Z').to_a.shuffle.first }
+    r.split("").shuffle.join
+  end
 
   store_names.each do |store_name|
     coupon_code = rand
