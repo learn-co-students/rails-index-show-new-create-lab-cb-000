@@ -1,0 +1,10 @@
+<% @coupons.each do |coupon| %>
+  <!-- <div><a href='<%= "/coupons/#{coupon.id}" %>'><%= coupon.to_s %></div> -->
+  <div><%= link_to coupon.to_s, coupon_path(coupon) %></div>
+<% end %>
+
+<br>
+
+<%= form_tag new_coupon_path, method: :get do %>
+  <%= submit_tag "New Coupon" %>
+<% end %>
