@@ -1,0 +1,11 @@
+<h1> List of Stores with Coupons</h1>
+
+<div>
+<%= @coupons.each do |coupon| %>
+  <h2><%= link_to coupon.store, coupon_path(coupon) %></h2>
+<% end %>
+</div>
+
+<%= form_tag new_coupon_path, :method => :get do %>
+  <%= submit_tag "Create New Coupon" %>
+<% end %>
