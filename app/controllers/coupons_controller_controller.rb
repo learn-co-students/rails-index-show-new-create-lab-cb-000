@@ -1,2 +1,0 @@
-class CouponsControllerController < ApplicationController
-end
