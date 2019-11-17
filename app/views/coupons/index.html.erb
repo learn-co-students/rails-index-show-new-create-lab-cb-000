@@ -1,0 +1,9 @@
+<%= content_tag :h1, "Coupons" %>
+
+<%= content_tag :div  do %>
+  <% @coupons.each do |coupon| %>
+    <%= content_tag :div  do %>
+      <%= link_to "#{coupon.store} - #{coupon.coupon_code}", coupon_path(coupon) %><br>
+    <% end %>
+  <% end %>
+<% end %>
