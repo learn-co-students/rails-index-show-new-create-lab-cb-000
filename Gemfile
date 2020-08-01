@@ -32,6 +32,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'nio4r', '~> 2.5.2'
+
 group :development, :test do
   gem 'byebug'
   gem 'spring'
